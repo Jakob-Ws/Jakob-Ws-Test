@@ -114,7 +114,7 @@ blockquote {
 code {
     font-family: "Courier New", Courier, monospace;
     background-color: var(--code-bg);
-    color: var(--accent-2);
+    color: var(  --text-primary);
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-size: 0.9em;
