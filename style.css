@@ -204,7 +204,7 @@ tr:nth-child(even) {
 }
 
 .gallery img:hover {
-    transform: scale(2.0);
+    transform: scale(1.5);
 }
 
 /* Weitere Stile bleiben unverändert */
