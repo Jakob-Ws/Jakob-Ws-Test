@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Primzahlen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+</script>
+</head>
+
+<body>
+<h1><a href="index.html">Jakob Ws</a></h1>
+<hr>
+
+<h2>Die Unendlichkeit der Primzahlen - Der Beweis nach Euclid</h2>
+
+<p>
+Es sei angenommen, dass die Menge der Primzahlen \(\mathbb{P}\) endlich ist. Das bedeutet, 
+dass \(\mathbb{P} = \{p_1, p_2, \dots, p_n\}\), wobei \(n \in \mathbb{N}\) und jedes \(p_i\) eine Primzahl ist. 
+Nun wird eine Zahl \(q\) konstruiert, indem das Produkt aller \(n\) Primzahlen gebildet und zu diesem Produkt \(1\) addiert wird:
+</p>
+
+<p>
+\[q = p_1 \cdot p_2 \cdot \dots \cdot p_n + 1 = \left( \prod_{i=1}^n p_i \right) + 1\]
+</p>
+
+<p>
+Für \(q\) ergeben sich zwei mögliche Fälle:
+</p>
+
+<ol>
+  <li>\(q \in \mathbb{P}\)</li>
+  <li>\(q \notin \mathbb{P}\)</li>
+</ol>
+
+<p>
+Im ersten Fall ergibt sich ein Widerspruch. Da \(q \neq p_i\) für alle \(i = 1, \dots, n\), 
+existiert eine Primzahl \(q\), die nicht in der ursprünglichen Menge \(\mathbb{P}\) enthalten ist. 
+Dies widerspricht der Annahme, dass die Menge der Primzahlen endlich ist.
+</p>
+
+<p>
+Im zweiten Fall gilt offensichtlich \(q \in \mathbb{N}\), und nach dem Fundamentalsatz der Arithmetik hat jede natürliche Zahl größer als 1 
+mindestens einen Primteiler. Folglich muss auch \(q\) einen Primteiler besitzen.
+</p>
+
+<p>
+\[\exists \: p \in \mathbb{P}: \quad p \mid q.\]
+</p>
+
+<p>Da \(p \in \mathbb{P}\) angenommen wird, gilt insbesondere \(p = p_i\) für ein \(i \in \{1, \dots, n\}\). Da \(p\) 
+auch das Produkt \(p_1 \cdot p_2 \cdot \dots \cdot p_n\) teilt, folgt nach dem Teilbarkeitsgesetz:
+</p>
+
+  <p>
+            \[\begin{align*}
+            p \mid q \quad \text{und} \quad p \mid p_1 \cdot p_2 \cdot \dots \cdot p_n &\quad \Rightarrow \quad p \mid (q - p_1 \cdot p_2 \cdot \dots \cdot p_n) \\
+            &\Rightarrow \quad p \mid 1.
+            \end{align*}\]
+        </p>
+
+<p>
+Dies stellt einen Widerspruch dar, da keine Primzahl \(p\) (mit \(p \neq 1\)) die Zahl \(1\) teilt. Somit ist die Annahme, 
+dass die Menge der Primzahlen \(\mathbb{P}\) endlich ist, widerlegt. Es folgt, dass die Menge der Primzahlen unendlich ist.
+</p>
+</body>
+</html>
