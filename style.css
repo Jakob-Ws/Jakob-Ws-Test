@@ -1,16 +1,17 @@
 /* Farbpalette als CSS-Variablen */
 :root {
-    --bg-primary: #fafafa;        /* Sehr helles Grau als Hintergrund */
+    --bg-primary: #f8f9fa;        /* Etwas helleres Grau als Hintergrund für angenehme Lesbarkeit */
     --bg-secondary: #ffffff;      /* Reines Weiß */
     --text-primary: #2d3436;      /* Dunkelgrau für Text */
     --text-secondary: #636e72;    /* Mittleres Grau */
-    --accent-1: #546de5;         /* Gedämpftes Blau */
-    --accent-2: #3d5a80;         /* Dunkles Blaugrau */
-    --link: #4a69bd;             /* Mittleres Blau für Links */
-    --link-hover: #6c5ce7;       /* Helleres Blau für Hover */
-    --subtle-border: #e9ecef;    /* Sehr helles Grau */
-    --code-bg: #f8f9fa;          /* Helles Grau */
-    --blockquote-bg: #f5f7fa;    /* Sehr helles Blaugrau */
+    --accent-1: #5d8def;          /* Gedämpftes Blau für Akzent */
+    --accent-2: #3d5a80;          /* Dunkles Blaugrau */
+    --link: #4a69bd;              /* Mittleres Blau für Links */
+    --link-hover: #6c5ce7;        /* Helleres Blau für Hover */
+    --subtle-border: #e9ecef;     /* Sehr helles Grau für Grenzen */
+    --code-bg: #f1f3f5;           /* Helles Grau für Code-Hintergrund */
+    --blockquote-bg: #f0f4f8;     /* Sehr helles Blaugrau */
+    --math-bg: #edf2f7;           /* Helles Blau für mathematische Blöcke */
 }
 
 /* Basis-Reset */
@@ -22,12 +23,12 @@
 
 /* Grundlegende Typografie und Layout */
 body {
-    max-width: 40em;
+    max-width: 42em;
     margin: 0 auto;
     padding: 2rem;
     font-family: Georgia, serif;
     font-size: 18px;
-    line-height: 1.6em;
+    line-height: 1.7;
     color: var(--text-primary);
     background-color: var(--bg-primary);
 }
@@ -43,22 +44,22 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-top: 1em;
     color: var(--accent-1);
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 /* Absätze und Listen */
 p, ul, ol {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.3em;
     color: var(--text-primary);
 }
 
@@ -110,23 +111,34 @@ blockquote {
     border-radius: 0 4px 4px 0;
 }
 
-/* Code */
-code {
+/* Code und Mathematische Notation */
+code, .math-inline {
     font-family: "Courier New", Courier, monospace;
     background-color: var(--code-bg);
-    color: var(  --text-primary);
+    color: var(--text-primary);
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-size: 0.9em;
 }
 
-pre {
-    background-color: var(--code-bg);
+pre, .math-block {
+    background-color: var(--math-bg);
+    color: var(--text-primary);
     padding: 1em;
     overflow-x: auto;
     margin: 1.5em 0;
     border-radius: 4px;
     border: 1px solid var(--subtle-border);
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Mathematische Blockdarstellung */
+.math-block {
+    display: block;
+    font-size: 1em;
+    margin: 1.5em 0;
+    padding: 1em;
+    border-left: 3px solid var(--accent-2);
 }
 
 /* Horizontale Linie */
@@ -187,6 +199,7 @@ tr:nth-child(even) {
     background: var(--accent-1);
     color: white;
 }
+
 /* Bildergalerie */
 .gallery {
     display: grid;
@@ -206,5 +219,3 @@ tr:nth-child(even) {
 .gallery img:hover {
     transform: scale(1.5);
 }
-
-/* Weitere Stile bleiben unverändert */
